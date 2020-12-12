@@ -1,0 +1,46 @@
+USE Library;
+
+
+CREATE TABLE Authors (
+    AuthorID INTEGER NOT NULL IDENTITY(1,1),
+	Abbrv VARCHAR(10),
+    FirstName VARCHAR(20) NOT NULL,
+	LastName VARCHAR(20),
+	DOB DATE,
+	DOD DATE,
+    CONSTRAINT PK_Authors PRIMARY KEY (AuthorID)
+);
+
+
+CREATE TABLE Books (
+	BookID INTEGER NOT NULL IDENTITY(1,1),
+    ISBN INTEGER,
+	Abbrv VARCHAR(10),
+    BookTitle VARCHAR(35) NOT NULL,
+	EditionNumber VARCHAR(20),
+	TotalPages SMALLINT NOT NULL,	
+    CONSTRAINT PK_Books PRIMARY KEY (BookID)
+);
+
+
+CREATE INDEX Abbrv ON Authors (Abbrv);
+CREATE INDEX FirstName ON Authors (FirstName);
+CREATE INDEX LastName ON Authors (LastName);
+
+CREATE INDEX BookID ON Books (BookID);
+CREATE INDEX BookTitle ON Books (BookTitle);
+CREATE INDEX TotalPages ON Books (TotalPages);
+
+ALTER TABLE Authors ADD BookID INTEGER 
+
+ALTER TABLE Books ADD AuthorID INTEGER 
+
+ALTER TABLE Authors ADD CONSTRAINT FK_Authors_Books 
+    FOREIGN KEY (BookID) REFERENCES Books (BookID);
+
+ALTER TABLE Books ADD CONSTRAINT FK_Books_Authors 
+    FOREIGN KEY (AuthorID) REFERENCES Authors (AuthorID);
+
+ALTER TABLE Books ALTER COLUMN ISBN VARCHAR(13) 
+
+ALTER TABLE Books ALTER COLUMN BookTitle VARCHAR(35) NULL 

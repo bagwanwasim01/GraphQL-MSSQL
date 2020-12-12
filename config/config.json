@@ -1,0 +1,71 @@
+{
+  "development": {  
+    "username": "wasim",
+    "password": "Wasim@123",  
+    "database": "Library",
+    "host": "localhost",
+    "dialect": "mssql",
+    "port": 1433,  
+    "logging": false,
+    "dialectOptions":{
+      "driver": "SQL Server Native Client 11.0",
+      "instanceName": "WASIM",
+      "trustedConnection": true,
+      "options":{
+        "trustedServerCertificate": true,
+        "encrypt": true,
+        "validateBulkLoadParameters": true
+      },
+      "ssl":{
+        "require": true,
+        "rejectUnauthorized": true
+      }
+    }
+  },
+  "test": {  
+    "username": "wasim",
+    "password": "Wasim@123",  
+    "database": "Library",
+    "host": "localhost",
+    "dialect": "mssql",
+    "port": 1433,  
+    "logging": false,
+    "dialectOptions":{
+      "driver": "SQL Server Native Client 11.0",
+      "instanceName": "WASIM",
+      "trustedConnection": true,
+      "options":{
+        "trustedServerCertificate": true,
+        "encrypt": true,
+        "validateBulkLoadParameters": true
+      },
+      "ssl":{
+        "require": true,
+        "rejectUnauthorized": true
+      }
+    }
+  },
+  "production":  {  
+    "username": "wasim",
+    "password": "Wasim@123",  
+    "database": "Library",
+    "host": "localhost",
+    "dialect": "mssql",
+    "port": 1433,  
+    "logging": false,
+    "dialectOptions":{
+      "driver": "SQL Server Native Client 11.0",
+      "instanceName": "WASIM",
+      "trustedConnection": true,
+      "options":{
+        "trustedServerCertificate": true,
+        "encrypt": true,
+        "validateBulkLoadParameters": true
+      },
+      "ssl":{
+        "require": true,
+        "rejectUnauthorized": true
+      }
+    }
+  }
+}
